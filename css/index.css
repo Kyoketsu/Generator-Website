@@ -1,0 +1,81 @@
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #313131;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Generator Styles */
+#generator-results {
+    width: 50%;
+}
+
+#generator-results ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.result {
+    list-style-type: none;
+    text-align: center;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.result h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 4vh;
+    color: white;
+}
+
+.result p {
+    padding-top: 6px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    letter-spacing: 2px;
+    font-size: 2vh;
+    color: white;
+    opacity: 0.2;
+}
+
+@media only screen and (max-width: 800px) {
+    #generator-results ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #generator-results {
+        width: 100%;
+    }
+
+    .result h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 8vh;
+        color: white;
+    }
+
+    .result p {
+        padding-top: 0px;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        letter-spacing: 2px;
+        font-size: 2vh;
+        color: white;
+        opacity: 0.2;
+    }
+}
