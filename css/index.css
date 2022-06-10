@@ -14,7 +14,7 @@ body {
 
 /* Generator Styles */
 #generator-results {
-    width: 50%;
+    width: 80%;
 }
 
 #generator-results ul {
@@ -35,7 +35,7 @@ body {
 }
 
 .result h3 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 4vh;
     color: white;
@@ -43,7 +43,7 @@ body {
 
 .result p {
     padding-top: 6px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     letter-spacing: 2px;
     font-size: 2vh;
@@ -51,7 +51,7 @@ body {
     opacity: 0.2;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     #generator-results ul {
         display: flex;
         flex-direction: column;
@@ -63,19 +63,22 @@ body {
     }
 
     .result h3 {
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        font-size: 8vh;
+        font-size: 6vh;
         color: white;
     }
 
     .result p {
-        padding-top: 0px;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-style: normal;
         letter-spacing: 2px;
         font-size: 2vh;
         color: white;
         opacity: 0.2;
+    }
+
+    .result {
+        margin-top: 20px;
     }
 }
