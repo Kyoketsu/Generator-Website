@@ -35,6 +35,11 @@ document.body.onkeydown = function(e)
     Generate();
 }
 
+document.body.onmousedown = function()
+{
+    Generate();
+}
+
 document.body.ontouchstart = function()
 {
     Generate();
