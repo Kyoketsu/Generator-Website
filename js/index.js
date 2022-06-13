@@ -1,4 +1,5 @@
 
+var LastTouch = new Date();
 const ResultFields = {
     Themes: document.getElementById("theme"),
     Genre: document.getElementById("genre"),
@@ -9,20 +10,19 @@ const ResultFields = {
 
 const Generators = [
     {
-        Themes: ["Summer", "Winter", "Sci-Fi", "Autumn", "Spring", "Tropical", "Fantasy", "Steampunk", "Middle Ages"],
-        Genre: ["Action", "Rhythm", "Platformer", "Stealth", "Shooter", "Horror", "Survival", "Fighting", "RPG", "MMORPG", "Turn-Based", "Sports", "Social"],
-        Location: ["Deep Ocean", "Islands", "Floating Islands", "Park", "Open Ocean", "Beach", "City", "Town"],
-        Mechanic: ["Building", "Swimming", "Puzzle Solving", "Teams", "Voting", "Trivia", "Jumping", "Running", "Throwing", "Interacting", "Environment", "Speed"]
+        Themes: ["Fantasy", "Horror", "Warfare", "Cartoony", "Futuristic"],
+        Genre: ["Shooter", "Strategy", "Simulator"],
+        Location: ["Jungle", "Ocean", "Swamp", "Deep Ocean"],
+        Mechanic: ["Open-World", "Gambling"]
     }
 ]
 
 // Methods
-function Generate()
+function Generate() 
 {
     let Generator = Generators[0]
     for (let key in Generator)
     {
-        console.log(Generator[key])
         let Random = Math.floor(Math.random() * Generator[key].length)
         ResultFields[key].innerHTML = Generator[key][Random];
     }
@@ -35,12 +35,18 @@ document.body.onkeydown = function(e)
     Generate();
 }
 
-document.body.onmousedown = function()
-{
-    Generate();
-}
-
 document.body.ontouchstart = function()
 {
-    Generate();
+    let CurrentTouch = new Date();
+
+    if (LastTouch.getTime() - CurrentTouch.getTime() > 0.5) 
+    { 
+        return;
+    } else {
+        LastTouch = CurrentTouch
+        Generate();
+    }
 }
+
+// Initial Refresh
+Generate();
